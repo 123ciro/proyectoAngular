@@ -1,0 +1,37 @@
+h1 {
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 768px) {
+    .bootstrap-vertical-nav .collapse {
+        display: block;
+        max-width: 1200px;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        max-width: 1500px;
+    }
+}
+
+.loader {
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+  
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

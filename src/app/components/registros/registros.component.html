@@ -1,0 +1,197 @@
+<div id="cargas" class="container" >
+  <h2 style="text-align: center">Formulario de Inscripcion Ing. Informatica </h2>
+  <form  class="needs-validation" novalidate     >
+      <fieldset class="scheduler-border ">
+          <h2 style="text-align: center">Datos del Estudiante</h2>
+          <div class="form-row">
+              <!-- Fecha Actual -->
+              <div class="form-group col-md-2" id="fecha">
+                  <label class="letra" for="fecha_inscripcion" style="font-weight: bold" >Fecha de Inscripcion</label>
+
+                  <input type="text" class="form-control form-control-sm letra " id="fecha_actual" >
+                  <br>
+
+
+              </div>
+              <button type="button" id="esconder" class="btn btn-light"> Buscar</button>
+          </div>
+          <div class="form-row">
+              <!-- Campo Cedula -->
+
+              <div class="form-group col-md-2 " >
+                  <label class="letra" for="exampleFormControlcedula" style="font-weight: bold;">Cedula</label>
+                  <input   type="number" min="100000" max="9999999"  class="form-control form-control-sm letra letra " id="cedula" placeholder="Cedula"   required >
+                  <div class="invalid-tooltip letra " style="width: 100%">
+                      <p> -Debe cargar una Cedula! </p>
+                      <p>  -El Nº de Cedula debe Ser mayor a 100000 pero menor a 9999999. </p>
+                  </div>
+              </div>
+              <!-- Campo Nombre -->
+              <div class="form-group col-md-2  " >
+                  <label  class="letra " for="validationCustom01" >Nombre</label>
+                  <input type="text" class="form-control form-control-sm letra "  id="nombre" placeholder="Nombre" maxlength="20"  required >
+                  <div class="invalid-tooltip letra">
+                      Debe cargar un Nombre!
+                  </div>
+              </div>
+              <!-- Campo Apellido -->
+              <div class="form-group col-md-2 ">
+                  <label class="letra"  for="exampleFormControlapellido" style="font-weight: bold">Apellido</label>
+                  <input type="text" class="form-control form-control-sm letra " id="apellido" placeholder="Apellido" required>
+
+                  <div class="invalid-tooltip letra">
+                      Debe cargar un Apellido!
+                  </div>
+              </div>
+              <div class="form-group col-md-2 " style="visibility: hidden">
+                  <label class="letra"  for="exampleFormControlapellido" style="font-weight: bold;">Id</label>
+                  <input type="text" class="form-control form-control-sm letra " id="id" placeholder="cod_alu" >
+
+              </div>
+
+          </div>
+          <div class="form-row">
+              <!-- Campo Fecha de Nacimiento -->
+              <div class="form-group col-md-2 ">
+                  <label class="letra" for="exampleFormControlfechanacimiento" style="font-weight: bold">Nacimiento</label>
+                  <input type="date"  class="form-control form-control-sm letra " min="1990-01-01"  id="fechanaci" required >
+                  <div class="invalid-tooltip letra" style="width: 100%">
+                      <p>  -Debe cargar la Fecha de Nacimiento!  </p>
+                      <p> -Fecha de Naciminto tiene que ser mayor a 1990</p>
+                  </div>
+              </div>
+              <!-- Campo Edad -->
+              <div class="form-group col-md-1 ">
+                  <label class="letra"  for="exampleFormControledad" style="font-weight: bold">Edad</label>
+                  <input type="number" class="form-control form-control-sm letra " min="18"  id="edad" placeholder="Edad" required >
+                  <div class="invalid-tooltip letra" style="width: 100%">
+                      <p>Debe cargar la Edad!</p>
+                      <p>Debe ser mayor de Edad</p>
+                  </div>
+              </div>
+              <!-- Campo Correo Electronico -->
+              <div class="form-group col-md-3  ">
+                  <label class="letra"  for="validationDefaultUsername" style="font-weight: bold">Correo Electronico</label>
+                  <input type="email" class="form-control form-control-sm letra "  id="correo" placeholder="Correo" autocomplete="on" required  >
+                  <div class="invalid-tooltip letra">
+                      <p> Debe introducir el correo! </p>
+                      <p> Ingrese un Correo Valido </p>
+                  </div>
+              </div> 
+          </div>
+          <div class="form-row">
+              <!-- Campo Genero -->
+              <div class="form-group col-md-2 " >
+                  <label  class="letra" for="exampleFormControlsexo" style="font-weight: bold">Sexo</label>
+                  <select class="form-control form-control-sm letra"  id="sexo" required >
+                      <option> </option>
+                      <option>Masculino</option>
+                      <option>Femenino</option>
+                  </select>
+                  <div class="invalid-tooltip letra">
+                      Debe introducir su Genero!
+                  </div>
+              </div>
+              <!-- Campo Tipo de Estudio-->
+              <div class="form-group col-md-2 " >
+                  <label class="letra"  for="exampleFormControltipoestudio" style="font-weight: bold;">Tipo de Estudio</label>
+                  <select class="form-control form-control-sm letra  "  id="tipoestudio"  required  >
+                      <option> </option>
+                      <option>Tecnico</option>
+                      <option>Modular</option>
+                  </select>
+                  <div class="invalid-tooltip letra">
+                      Debe introducir el tipo de Estudio!
+                  </div>
+              </div>
+              <!-- Campo Correo Electronico -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  for="validationDefaultUsername" style="font-weight: bold" >Nº Celular</label>
+                  <input type="text" class="form-control form-control-sm letra " id="cel" placeholder="Nº Celular"  required >
+                  <div class="invalid-tooltip letra">
+                      Debe introducir su Nº de Celular!
+                  </div>
+              </div> 
+          </div>
+      </fieldset>
+      <br>
+      <!--  DATOS DE PARIENTES  -->
+      <fieldset class="scheduler-border ">
+          <h2 style="text-align: center">Datos de Parientes</h2>
+          <h5>Padre</h5>
+          <div class="form-row">
+              <!-- Campo Padre -->
+              <!-- Campo Nombre Padre -->
+              <div class="form-group col-md-2  " >
+                  <label class="letra"   style="font-weight: bold" >Nombre</label>
+                  <input type="text" class="form-control form-control-sm letra " id="nombre_padre" placeholder="Nombre" >
+              </div>
+              <!-- Campo Apellido Padre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"   style="font-weight: bold">Apellido</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Apellido">
+              </div>
+              <!-- Campo Cedula Padre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  style="font-weight: bold    ">Cedula</label>
+                  <input type="text" onkeyup="format(this)" onchange="format(this)" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Cedula">
+              </div>
+          </div>
+          <div class="form-row">
+              <!-- Campo Padre -->
+              <!-- Campo Telefono Padre -->
+              <div class="form-group col-md-2  " >
+                  <label class="letra"   style="font-weight: bold" >Telefono</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Telefono">
+              </div>
+              <!-- Campo Ocupacion Padre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  style="font-weight: bold">Ocupacion</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Ocupacion">
+              </div>
+              <!-- Campo Correo Padre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"   style="font-weight: bold">Correo</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Correo">
+              </div>
+          </div>
+          <!-- Campo de Madre -->
+          <h5>Madre</h5>
+          <div class="form-row">
+              <!-- Campo Madre -->
+              <!-- Campo Nombre -->
+              <div class="form-group col-md-2  " >
+                  <label class="letra"   style="font-weight: bold" >Nombre</label>
+                  <input type="text" class="form-control form-control-sm letra "  id="exampleFormControlInput"  placeholder="Nombre">
+              </div>
+              <!-- Campo Apellido -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"   style="font-weight: bold">Apellido</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Apellido">
+              </div>
+              <!-- Campo Apellido -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  style="font-weight: bold">Cedula</label>
+                  <input type="text" onkeyup="format(this)" onchange="format(this)" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Cedula">
+              </div>
+          </div>
+          <div class="form-row">
+              <!-- Campo Madre -->
+              <!-- Campo Telefono Madre -->
+              <div class="form-group col-md-2  " >
+                  <label class="letra"   style="font-weight: bold" >Telefono</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Telefono">
+              </div>
+              <!-- Campo Ocupacion Madre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  style="font-weight: bold">Ocupacion</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Ocupacion">
+              </div>
+              <!-- Campo Correo Madre -->
+              <div class="form-group col-md-2  ">
+                  <label class="letra"  style="font-weight: bold">Correo</label>
+                  <input type="text" class="form-control form-control-sm letra " id="exampleFormControlInput" placeholder="Correo" >
+              </div>
+          </div>
+          <br>
+      </fieldset>
