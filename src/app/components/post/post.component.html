@@ -1,0 +1,38 @@
+<h2> Prueba de Post</h2>
+
+
+<input type="text" id="myInput" style="width: 250px;margin-left: 20px;" onkeyup="myFunction()" placeholder="Buscar por User Id" title="Type in a name">
+
+
+
+<!-- <div class="container"  >
+
+  <ul id="ul" *ngFor=" let pos of post " class="list-group container" >
+
+      <li id="li" class="list-group-item"> Id: {{pos.id}} == Titulo: ==  {{ pos.title}}
+        </li>
+
+  </ul>
+
+</div> -->
+
+
+
+<table id="myTable"  >
+    <tr class="header">
+      
+        <th style="width:5%;">User Id</th>
+      <th style="width:5%;">Codigo</th>
+      <th style="width:50%;">Titulo</th>
+
+    </tr>
+    <td>{{pos.userId}}</td>
+    <tr *ngFor=" let pos of post ">
+      <td>{{pos.userId}}</td>
+      <td  >{{pos.id}}</td>
+      <td id="titulo">{{ pos.title}}</td>
+    </tr>
+    
+  </table>
+  
+ 

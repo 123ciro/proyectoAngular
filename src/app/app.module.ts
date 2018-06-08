@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// COmponentes del Proyecto
+// Componentes del Proyecto
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegistrosComponent } from './components/registros/registros.component';
 import { FooterComponent } from './components/footer/footer.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { PaisesComponent } from './components/paises/paises.component';
+import { PaisesService } from './paises.service';
+import { PostComponent } from './components/post/post.component';
+import { PostService } from './post.service';
 
 
 @NgModule({
@@ -14,13 +20,17 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     RegistrosComponent,
     FooterComponent,
+    PaisesComponent,
+    PostComponent,
 
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
